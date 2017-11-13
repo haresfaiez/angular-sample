@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+.sparse-input-group {
+  margin: 24px 0;
+}
+
+.input-group-addon {
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.form-control {
+  border: none;
+  background: none;
+  border-bottom: 1px solid $light-text-color;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  @extend .form-control;
+  border-color: $secondary-text-color;
+}

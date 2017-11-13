@@ -1,0 +1,20 @@
+div
+  div(class='col-md-12')
+    h1 {{ subject.identity }}
+    h1 Fund asset: {{ subject.asset.name }}
+    aside Initiated at {{ subject.initiation }} By {{ subject.initiator }}
+  section(class='panel-body row')
+    h2 Distribute
+    div(class='card')
+      form(#opportunityForm='ngForm', class='panel panel-default')
+        ul(class='list-group')
+          li(class='list-group-item')
+            label Target
+              div(class='input-group')
+                input(type='text'
+                , class='form-control'
+                , name='action'
+                , [(ngModel)]='distribution.target')
+      button((click)='distribute()', id='distribute', class='btn btn-primary') distribute
+  section(class='panel-body row')
+    h2 Distributions

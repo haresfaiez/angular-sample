@@ -1,0 +1,7 @@
+**/*.js
+**/*.css
+!systemjs.config.extras.js
+!systemjs.config.js
+!systemjs-angular-loader.js
+app/**/*.html
+index.html

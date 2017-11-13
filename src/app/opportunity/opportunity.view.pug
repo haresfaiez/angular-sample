@@ -1,0 +1,65 @@
+div(class='panel panel-default')
+  article(class='panel-body')
+    section(class='row')
+      div(class='col-md-9')
+        h1 {{ subject.identity.name }} By {{ subject.asset.origin }}
+        aside Initiated at {{ subject.creationDate }}
+        dl
+          dt(class='col-md-2') Progress
+          dd {{ subject.closingProbability }}%
+          dt(class='col-md-2') Value
+          dd Between {{ subject.value.min }} and {{ subject.value.max }}
+      div(class='col-md-3')
+        button(routerLink='/share/{{ subject.asset.origin }}/{{ subject.identity.name }}', id='close', class='btn btn-default') Close the opportunity
+    section(class='panel-body row')
+      h2 CURRENT ACTION
+      div
+        form(#opportunityForm='ngForm', class='panel panel-default')
+          ul(class='list-group')
+            li(class='list-group-item')
+              label Action
+                div(class='input-group')
+                  input(type='text'
+                  , class='form-control'
+                  , name='action'
+                  , [(ngModel)]='current.action')
+            li(class='list-group-item')
+              label Probablity of closing
+                div(class='input-group')
+                  input(type='text'
+                  , class='form-control'
+                  , name='closingProbability'
+                  , [(ngModel)]='current.closingProbability')
+                  span(class='input-group-addon') %
+            li(class='list-group-item')
+              label Value
+                div(class='input-group')
+                  span(class='input-group-addon') minimum
+                  input(type='text'
+                  , class='form-control'
+                  , name='minimumValue'
+                  , [(ngModel)]='current.minimumValue')
+                  span(class='input-group-addon') TND
+                div(class='input-group')
+                  span(class='input-group-addon') maximum
+                  input(type='text'
+                  , class='form-control'
+                  , name='maximumValue'
+                  , [(ngModel)]='current.maximumValue')
+                  span(class='input-group-addon') TND
+        button((click)='update()', id='update', class='btn btn-primary') Update
+    section(class='panel-body row')
+      h2 HISTORY
+      div(class='panel panel-default')
+        ul(class='list-group')
+          li(class='list-group-item col-md-12')
+            div(class='col-md-3') 
+              h3 ACTION
+            div(class='col-md-6') 
+              h3 VALUE
+            div(class='col-md-3')
+              h3 CLOSING PROBABILITY
+          li(*ngFor='let each of journal', class='list-group-item col-md-12 card')
+            div(class='col-md-3') {{ each.action }}
+            div(class='col-md-6') Between {{ each.minimumValue }} and {{ each.maximumValue }}
+            div(class='col-md-3') {{ each.closingProbability }}

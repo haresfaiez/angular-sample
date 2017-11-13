@@ -1,0 +1,33 @@
+div(class='panel panel-default')
+  article(class='panel-body')
+    section(class='row')
+      div(class='col-md-9')
+        h1 {{ name }}
+      div(class='col-md-3')
+        button((click)='askForOpportunity()', id='askforopportunity', class='btn btn-default') Ask for opportunity
+    section(class='panel-body row')
+      h2 TARGET
+        ul(class='list-group')
+          li(*ngFor='let each of target', class='list-group-item') {{ each }}
+    section(class='panel-body row')
+      h2 OPPORTUNITIES
+      div(class='col-md-3 panel panel-default')
+        h3 CONTACTED
+        ul(class='list-group cards')
+          li(*ngFor='let each of opportunities.contacted', class='list-group-item')
+            opportunity-card([opportunity]='each')
+      div(class='col-md-3')
+        h3 INITIAL DESIRE
+        ul(class='list-group cards')
+          li(*ngFor='let each of opportunities.initialDesire', class='list-group-item')
+            opportunity-card([opportunity]='each')
+      div(class='col-md-3')
+        h3 DUE DILIGENCE
+        ul(class='list-group cards')
+          li(*ngFor='let each of opportunities.dueDiligence', class='list-group-item')
+            opportunity-card([opportunity]='each')
+      div(class='col-md-3')
+        h3 APPROVAL INITIALLY
+        ul(class='list-group cards')
+          li(*ngFor='let each of opportunities.approvedInitially', class='list-group-item')
+            opportunity-card([opportunity]='each')

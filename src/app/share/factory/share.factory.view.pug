@@ -1,0 +1,18 @@
+div(class='col-md-10')
+  form(#shareForm='ngForm', class='panel panel-default')
+    ul(class='list-group')
+      li(class='list-group-item')
+        label Scope
+          div(class='input-group')
+            input(type='text'
+            , class='form-control'
+            , name='scope'
+            , [(ngModel)]='input.scope')
+      li(class='list-group-item')
+        label Equity
+          div(class='input-group')
+            input(type='text'
+            , class='form-control'
+            , name='equity'
+            , [(ngModel)]='input.equity')
+    button((click)='createShare()', id='createShare', class='btn btn-default') Create the share

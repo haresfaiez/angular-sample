@@ -1,0 +1,13 @@
+div(class='card')
+  a(routerLink='/fund/{{ opportunity.identity.fund }}/{{ opportunity.identity.name }}')
+    h3 {{ opportunity.asset.origin | participantName | async }}
+  p Initiated at {{ opportunity.creationDate }}
+  dl
+    dt(class='col-md-4') Progress
+    dd {{ opportunity.closingProbability }}%
+    dt(class='col-md-4') Value
+    dd Between {{ opportunity.value.min }} and {{ opportunity.value.max }}
+  div(class='row')
+    div(class='col-md-7')
+    div(class='col-md-3')
+      button((click)='upgrade()', id='upgrade', class='btn btn-primary') Upgrade

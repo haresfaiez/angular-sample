@@ -1,0 +1,35 @@
+div(class='panel panel-default')
+  article(class='panel-body')
+    section(class='row')
+      div(class='col-md-9')
+        h1 Initiate a fund
+    section(class='panel-body row')
+      form(#fundForm='ngForm', class='col-md-6 panel panel-default')
+        div(class='input-group sparse-input-group')
+          input(type='text'
+          , name='name'
+          , placeholder='Name'
+    , class='form-control'
+    , [ngModelOptions]='{standalone: true}'
+          , [(ngModel)]='name')
+        div(class='input-group sparse-input-group')
+          input(type='text'
+          , name='firstTarget'
+          , placeholder='First target'
+    , class='form-control'
+    , [ngModelOptions]='{standalone: true}'
+          , [(ngModel)]='firstTarget')
+          input(type='text'
+          , name='secondTarget'
+          , placeholder='Second target'
+    , class='form-control'
+    , [ngModelOptions]='{standalone: true}'
+          , [(ngModel)]='secondTarget')
+          input(type='text'
+          , name='thirdTarget'
+          , placeholder='Third target'
+    , class='form-control'
+    , [ngModelOptions]='{standalone: true}'
+          , [(ngModel)]='thirdTarget')
+        div(class='input-group sparse-input-group')
+          button(class='btn btn-default', (click)="createFund()", id="createFund") Initiate

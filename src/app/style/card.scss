@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.card {
+  padding: 12px;
+  color: $sub-text-color;
+  background: $card-bg;
+  box-shadow: 1px 6px 6px rgba(0,0,0,0.15), 0px 0px 0px rgba(0,0,0,0.22);
+  border-radius: 3px;
+}
+
+.card h3 {
+  color: #000;
+}

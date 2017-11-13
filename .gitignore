@@ -1,0 +1,11 @@
+**/*~
+.idea
+node_modules
+jspm_packages
+npm-debug.log
+debug.log
+*.js.map
+_test-output
+_temp
+bower_components/
+build/

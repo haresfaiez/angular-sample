@@ -1,0 +1,4 @@
+*.js
+*.js.map
+!karma-test-shim.js
+!karma.conf.js

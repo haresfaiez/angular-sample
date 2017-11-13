@@ -1,0 +1,18 @@
+div(class='header')
+  nav(class='navbar navbar-default')
+    a(class='navbar-brand col-md-1', routerLink='/') Fundraising
+    ul(class='nav navbar-nav col-md-3')
+      li(class='')
+        a(routerLink='/') Home
+      li(class='')
+        a(routerLink='/fund') Initiate a fund
+    form(#shareForm='ngForm', class='col-md-4')
+        div(class='input-group')
+          input(type='text'
+          , class='form-control'
+          , name='scope'
+          , placeholder='0x12051ef...'
+          , [(ngModel)]='target.fund')
+          span(class='input-group-addon', (click)='findFund()', id='findFund', class='glyphicon glyphicon-search', aria-hidden='true')
+    a(routerLink='/identity', class='btn btn-info col-md-2') Manage identity
+router-outlet

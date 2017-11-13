@@ -1,0 +1,13 @@
+div(class='col-md-10')
+  form(#shareForm='ngForm')
+    ul(class='list-group')
+      li(class='list-group-item')
+        label Name
+          div(class='input-group')
+            input(type='text'
+            , class='form-control'
+            , placeholder='{{current.name}}'
+            , name='name'
+            , [(ngModel)]='theupdate.name')
+
+    button((click)='update()', id='update', class='btn btn-default') Update

@@ -1,0 +1,20 @@
+{
+  "name": "Fundraising",
+  "description": "Fundraising company information system using Blockchain",
+  "main": "index.js",
+  "authors": [
+    "Hares Faiez <faiez.hrs@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

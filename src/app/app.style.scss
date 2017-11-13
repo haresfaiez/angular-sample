@@ -1,0 +1,48 @@
+@import './style/variables.scss';
+
+@import 'bootstrap';
+
+@import './style/button.scss';
+@import './style/list.scss';
+@import './style/heading.scss';
+@import './style/form.scss';
+
+@import './style/card.scss';
+
+.header {
+  background: #fff;
+  box-shadow: 1px 6px 6px rgba(0,0,0,0.01),0px 1px 10px rgba(0,0,0,0.1);
+  background-position-x: 75%;
+  background-position-y: 20%;
+  padding: 12px 0;
+}
+
+.navbar-default {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+aside {
+  color: $sub-text-color;
+}
+
+.panel {
+  background: none;
+  box-shadow: none;
+}
+
+.panel > .list-group .list-group-item,
+.panel > .panel-collapse > .list-group .list-group-item {
+  border: none;
+}
+
+.panel-default {
+  border: none;
+
+  .panel-heading {
+    background: none;
+    border    : none;
+  }
+}
